@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		
+		let btn_enviar, btn_cerrar_modal, formulario, ventana;
+		let correo,clave, usuario;
+
+		window.onload = function(){
+			btn_enviar = document.getElementById("btn_enviar");
+			btn_cerrar_modal = document.getElementById("btn_cerrar_modal");
+			correo = document.getElementById("correo");
+			clave = document.getElementById("clave");
+			ventana = document.querySelector("#ventana");
+			formulario = document.getElementById("formulario");
+			formulario.addEventListener("submit",procesarEnvio);
+			btn_cerrar_modal.addEventListener("click",cerrarVentana);
+		}
+
+		function cerrarVentana(evento){
+			//ventana.close();
+			location.href = "login.html";
+		}
+
+		function procesarEnvio(evento){
+
+			let txt_correo,txt_clave;
+			let str_usuario;
+			txt_correo = correo.value;
+			txt_clave = md5(clave.value);
+
+			usuario = {
+				correo:txt_correo,
+				clave:txt_clave
+			};
+
+			str_usuario = JSON.stringify(usuario);
+			localStorage.setItem("usuario",str_usuario);
+
+			ventana.showModal();
+			evento.preventDefault();
+
+			//console.log(evento.target);
+
+		}
+	</script>
+</head>
+<body>
+	
+	<dialog id="ventana">
+		<h1>¡Registro completo!🥳</h1>
+		<p>Ya puedes ingresar al sitio, bienvenid@</p>
+		<button id="btn_cerrar_modal">Ok</button>
+	</dialog>
+
+	<form action="" id="formulario">
+		
+		<label for="correo">
+			Correo:
+			<input type="email" name="correo" id="correo" placeholder="Ingrese el correo" required>
+		</label><br>
+
+		<label for="clave">
+			Clave:
+			<input type="password" name="clave" id="clave" placeholder="Ingrese la clave" required>
+		</label><br>
+
+		<input id="btn_enviar" type="submit" value="Registrarse">
+
+	</form>
+
+	<script src="js/md5.min.js"></script>
+	<!-- <script src="js/main.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		
+		let btn_enviar, btn_cerrar_modal, formulario, ventana;
+		let correo,clave, usuario, mensaje;
+
+		window.onload = function(){
+			btn_enviar = document.getElementById("btn_enviar");
+			btn_cerrar_modal = document.getElementById("btn_cerrar_modal");
+			mensaje = document.querySelector("#ventana p");
+			correo = document.getElementById("correo");
+			clave = document.getElementById("clave");
+			ventana = document.querySelector("#ventana");
+			formulario = document.getElementById("formulario");
+			formulario.addEventListener("submit",procesarEnvio);
+			btn_cerrar_modal.addEventListener("click",cerrarVentana);
+		}
+
+		function cerrarVentana(evento){
+			ventana.close();
+			//location.href = "login.html";
+		}
+
+		function procesarEnvio(evento){
+
+			let txt_correo,txt_clave;
+			let str_usuario, md5_clave;
+			txt_correo = correo.value;
+			txt_clave = md5(clave.value);
+
+			str_usuario = localStorage.getItem("usuario");
+			usuario = JSON.parse(str_usuario);
+			
+
+			if(usuario.correo === txt_correo && usuario.clave === txt_clave){
+				mensaje.innerHTML = "Login exitoso";
+			}
+			else{
+				mensaje.innerHTML = "Valida los datos";
+			}
+
+			ventana.showModal();
+			evento.preventDefault();
+
+
+			//console.log(evento.target);
+
+		}
+	</script>
+</head>
+<body>
+	<dialog id="ventana">
+		<p>Ya puedes ingresar al sitio, bienvenid@</p>
+		<button id="btn_cerrar_modal">Ok</button>
+	</dialog>
+	<form action="" id="formulario">
+		
+		<label for="">
+			<input type="email" id="correo" placeholder="Ingrese el correo" required>
+		</label><br>
+
+		<label for="">
+			<input type="password" id="clave" placeholder="Ingrese la clave" required>
+		</label><br>
+
+
+		<input id="btn_enviar" type="submit" value="Ingresar">
+
+	</form>
+
+	<script src="js/md5.min.js"></script>
+	<!-- <script src="js/main.js"></script> -->
+</body>
+</html>
