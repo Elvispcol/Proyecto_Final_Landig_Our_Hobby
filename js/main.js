@@ -6,17 +6,12 @@ var iniciarLogin = undefined, iniciarRegistro = undefined;
 let cont_sesion;
 let logeado = false;
 const menu_html = `<li>
-<a href="javascript:void(0);" id="item_1">Home</a>
+<a href="javascript:void(0);" id="item_1">Principal</a>
 </li>
 <li>
-<a href="javascript:void(0);" id="item_2">About Us</a>
+<a href="javascript:void(0);" id="item_2">¿Qué Somos?</a>
 </li>
 <li>
-<!-- First Tier Drop Down -->
-<label for="drop-2" class="toggle">
-Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span>
-</label>
-<a href="#">Dropdown 
 <span class="fa fa-angle-down" aria-hidden="true"></span>
 </a>
 <input type="checkbox" id="drop-2" />
@@ -26,10 +21,10 @@ Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span>
 </ul>
 </li>
 <li>
-<a href="javascript:void(0);" id="item_5">Collections</a>
+<a href="javascript:void(0);" id="item_5">Nuestros Eventos</a>
 </li>
 <li>
-<a href="javascript:void(0);" id="item_6">Contact</a>
+<a href="javascript:void(0);" id="item_6">Contáctanos</a>
 </li>`;
 let sesion_on =`
 <span>

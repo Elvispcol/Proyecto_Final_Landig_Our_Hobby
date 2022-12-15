@@ -2,97 +2,97 @@
 function llenarProductos(){
 	productos[1]={
 		id:1,
-		nombre:"Messenger Bag",
-		precio:799,
-		imagen:"b1.jpg",
-		estrellas:3,
-		descuento:.2
+		nombre:"Concierto Todos Los Géneros",
+		precio:0,
+		imagen:"E0_Concierto2_By_freepik.png",
+		estrellas:5,
+		descuento:.4
 	};
 	productos[2]={
 		id:2,
-		nombre:"Shoulder Bag (Pink)",
-		precio:799,
-		imagen:"b2.jpg",
-		estrellas:3,
+		nombre:"Acampar Valle Aburrá",
+		precio:0,
+		imagen:"E1_Acampar1_By_freepik.png",
+		estrellas:4,
 		descuento:.3
 	};
 	productos[3]={
 		id:3,
-		nombre:"Sling Bag",
-		precio:599,
-		imagen:"b3.jpg",
+		nombre:"Escalando Bajo Techo",
+		precio:0,
+		imagen:"E2_Escala3_By_freepik.png",
 		estrellas:3,
 		descuento:.2
 	};
 	productos[4]={
 		id:4,
-		nombre:"Tote (Blue)",
-		precio:799,
-		imagen:"b4.jpg",
-		estrellas:4,
+		nombre:"Un día como tenista",
+		precio:0,
+		imagen:"E3_Tenis1_By_freepik.png",
+		estrellas:3,
 		descuento:.1
 	};
 	productos[5]={
 		id:5,
-		nombre:"Satchel (Yellow)",
-		precio:999,
-		imagen:"b5.jpg",
-		estrellas:5,
+		nombre:"Ciclismo en Grupo",
+		precio:0,
+		imagen:"E4_Ciclismo1_By_freepik.png",
+		estrellas:4,
 		descuento:0
 	};
 	productos[6]={
 		id:6,
-		nombre:"Shoulder Bag (Orange)",
-		precio:799,
-		imagen:"b6.jpg",
+		nombre:"Maratón de Juegos de mesa",
+		precio:0,
+		imagen:"E6_Juego_Mesa1_By_freepik.png",
 		estrellas:3,
 		descuento:.4
 	};
 	productos[7]={
 		id:7,
-		nombre:"Hobo (Blue)",
-		precio:500,
-		imagen:"b7.jpg",
+		nombre:"Reto cocina salvaje",
+		precio:0,
+		imagen:"Cocina_By_freepik.png",
 		estrellas:4.5,
 		descuento:.1
 	};
 	productos[8]={
 		id:8,
-		nombre:"Satchel (Pink)",
-		precio:400,
-		imagen:"b8.jpg",
+		nombre:"Tributo a las motos pesadas",
+		precio:0,
+		imagen:"Motos_By_freepik.png",
 		estrellas:3.5,
 		descuento:.6
 	};
 	productos[9]={
 		id:9,
-		nombre:"Street Bag",
-		precio:599,
-		imagen:"b2.jpg",
+		nombre:"Trabajo Comunitario",
+		precio:0,
+		imagen:"Trabajo_Comunitario1_By_freepik.png",
 		estrellas:3.8,
 		descuento:.3
 	};
 	productos[10]={
 		id:10,
-		nombre:"Tote market",
-		precio:399,
-		imagen:"b6.jpg",
+		nombre:"Gánale a un experto de ajedrez",
+		precio:0,
+		imagen:"Ajedrez_By_freepik.png",
 		estrellas:4.1,
 		descuento:.4
 	};
 	productos[11]={
 		id:11,
-		nombre:"Camel Bag",
-		precio:299,
-		imagen:"b8.jpg",
+		nombre:"Tarde de Kayak",
+		precio:0,
+		imagen:"Kayak_Rio_By_freepik.png",
 		estrellas:2.5,
 		descuento:0
 	};
 	productos[12]={
 		id:12,
-		nombre:"Cargo Bag",
-		precio:799,
-		imagen:"b7.jpg",
+		nombre:"Globo Por La Ciudad",
+		precio:0,
+		imagen:"Globo_By_freepik.png",
 		estrellas:5,
 		descuento:0
 	};
